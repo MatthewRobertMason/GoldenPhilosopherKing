@@ -43,15 +43,18 @@ public class TrolleyDriver : MonoBehaviour
             switch(currentSegment){
                 case TrackSegment.Entering:
                 case TrackSegment.BottomLeft:
+                    segmentSpeed = 0.5f;
                     currentSegment = TrackSegment.BottomRight;
                     currentPathObject = BottomRightSegment;
                     break;
 
                 case TrackSegment.BottomRight:
                     if(ExitRight){
+                        segmentSpeed = 0.5f;
                         currentSegment = TrackSegment.ExitRight;
                         currentPathObject = ExitRightSegment;
                     } else {
+                        segmentSpeed = 0.3f;
                         currentSegment = TrackSegment.Top;
                         currentPathObject = TopSegment;
                     }
@@ -59,9 +62,11 @@ public class TrolleyDriver : MonoBehaviour
 
                 case TrackSegment.Top:
                     if(ExitLeft){
+                        segmentSpeed = 0.5f;
                         currentSegment = TrackSegment.ExitLeft;
                         currentPathObject = ExitLeftSegment;
                     } else {
+                        segmentSpeed = 0.4f;
                         currentSegment = TrackSegment.BottomLeft;
                         currentPathObject = BottomLeftSegment;
                     }
