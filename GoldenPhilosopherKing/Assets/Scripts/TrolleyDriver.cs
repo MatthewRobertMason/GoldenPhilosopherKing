@@ -131,4 +131,14 @@ public class TrolleyDriver : MonoBehaviour
         Trolley.GetComponent<SpriteRenderer>().sprite = MovingLeft;
         Trolley.GetComponent<SpriteRenderer>().flipX = true;
     }
+
+    public void TurnRight(){
+        ExitRight = true;
+        ExitLeft = false;
+    }
+    public void TurnLeft(){
+        ExitLeft = true;
+        ExitRight = false;
+    }
+
 }
