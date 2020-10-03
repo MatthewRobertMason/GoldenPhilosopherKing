@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ScaleToFit : MonoBehaviour
 {
-    public SpriteRenderer background;
-
     // Update is called once per frame
     void Update()
     {
