@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Session : MonoBehaviour
 {
@@ -63,7 +64,39 @@ public class Session : MonoBehaviour
 
         // Set a random quote text
         int quoteIndex = Random.Range(0, quotes.Count);
-        Debug.Log(quotes[quoteIndex]);
-        Debug.Log(quoteAuthors[quoteIndex]);
+        GameObject.Find("QuoteTextBox").GetComponent<Text>().text = quotes[quoteIndex];
+        GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quoteAuthors[quoteIndex];
+
+        // Set a random title
+        GameObject.Find("TitleTextBox").GetComponent<Text>().text = GenerateMoralAlignment();
+    }
+
+    string GenerateMoralAlignment(){
+        string result = "";
+        if(Random.Range(0.0f, 1.0f) < 0.8f){
+            string[] prefixes = {
+                "Bronze",
+                "Pewter",
+                "Putty",
+                "Wooden",
+                "Profound",
+                "Hollow",
+                "Goblin"
+            };
+            result += prefixes[Random.Range(0, prefixes.Length)] + " ";
+        }
+
+        string[] role = {
+            "Bandit",
+            "Haberdasher",
+            "Student",
+            "Sage",
+            "Clerk",
+            "Drunk"
+        };
+
+        result += role[Random.Range(0, role.Length)];
+
+        return result;
     }
 }
