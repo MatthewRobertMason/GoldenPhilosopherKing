@@ -17,3 +17,6 @@ Images
 - Voice/Voice mute icon
 - Music/Music mute icon
 - Exit icon
+
+Music
+- Find some good music with attribution
