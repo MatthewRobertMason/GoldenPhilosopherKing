@@ -11,10 +11,11 @@ public class Session : MonoBehaviour
     void Start()
     {
         if(Current){
-            Debug.Log("Only one session object should be set.");
-            GameObject.Destroy(this);
+            Destroy(this.gameObject);
+        } else {
+            Current = this;
+            Object.DontDestroyOnLoad(this.gameObject);
         }
-        Current = this;
     }
 
     public void Reset(){
