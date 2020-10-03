@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
     public float volume = 1.0f;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         initialVolumnMultiplier = volumeMultiplier;

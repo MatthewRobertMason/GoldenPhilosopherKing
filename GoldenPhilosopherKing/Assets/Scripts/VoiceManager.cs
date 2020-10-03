@@ -19,7 +19,7 @@ public class VoiceManager : MonoBehaviour
     public float audioMultiplierWhenPlaying = 0.33f;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         audioManager = FindObjectOfType<AudioManager>();
