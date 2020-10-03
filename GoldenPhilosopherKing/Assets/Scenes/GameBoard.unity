@@ -343,6 +343,8 @@ MonoBehaviour:
   TargetSprites:
   - {fileID: 21300000, guid: 5ace985228d78c743b131fa39db7044a, type: 3}
   - {fileID: 21300000, guid: 32e617634ea3c6a478027a2d48f5d2e7, type: 3}
+  - {fileID: 21300000, guid: 6408a4888e4917d4f8fd4b20ad5cc0b9, type: 3}
+  QuoteFile: {fileID: 4900000, guid: 2d7e1ea4dd4f243449a7ea9776826c19, type: 3}
 --- !u!4 &300060276
 Transform:
   m_ObjectHideFlags: 0
