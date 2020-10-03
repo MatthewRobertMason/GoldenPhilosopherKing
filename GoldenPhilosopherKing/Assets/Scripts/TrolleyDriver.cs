@@ -74,7 +74,7 @@ public class TrolleyDriver : MonoBehaviour
 
                 case TrackSegment.ExitLeft: 
                 case TrackSegment.ExitRight:
-                    Debug.Log("TODO Reset Scene to new board");
+                    Session.Current.Reset();
                     return;
             }
             segmentDistance = 0;
@@ -131,4 +131,14 @@ public class TrolleyDriver : MonoBehaviour
         Trolley.GetComponent<SpriteRenderer>().sprite = MovingLeft;
         Trolley.GetComponent<SpriteRenderer>().flipX = true;
     }
+
+    public void TurnRight(){
+        ExitRight = true;
+        ExitLeft = false;
+    }
+    public void TurnLeft(){
+        ExitLeft = true;
+        ExitRight = false;
+    }
+
 }
