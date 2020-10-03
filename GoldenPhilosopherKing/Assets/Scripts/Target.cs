@@ -13,7 +13,7 @@ public class Target : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        // this.gameObject.GetComponent<Rigidbody2D>().AddForce(escapeVector);
+        this.gameObject.GetComponent<Rigidbody2D>().AddForce(escapeVector);
     }
 
     public void SetSprite(Sprite image){
