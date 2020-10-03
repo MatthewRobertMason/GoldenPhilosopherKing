@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip startAudio;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,5 +55,10 @@ public class AudioManager : MonoBehaviour
     public void Pause()
     {
         audioSource.Pause();
+    }
+
+    public void SetVolume()
+    {
+
     }
 }
