@@ -30,9 +30,11 @@ public class TrolleyDriver : MonoBehaviour
     private float segmentSpeed = 1;
 
     public GameObject Trolley;
+    private SpriteRenderer sprite;
 
     void Start(){
         currentPathObject = EnterSegment;
+        sprite = Trolley.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -51,6 +53,7 @@ public class TrolleyDriver : MonoBehaviour
                 case TrackSegment.BottomRight:
                     if(ExitRight){
                         segmentSpeed = 0.5f;
+                        Trolley.GetComponent<PolygonCollider2D>().enabled = true;
                         currentSegment = TrackSegment.ExitRight;
                         currentPathObject = ExitRightSegment;
                     } else {
@@ -63,6 +66,7 @@ public class TrolleyDriver : MonoBehaviour
                 case TrackSegment.Top:
                     if(ExitLeft){
                         segmentSpeed = 0.5f;
+                        Trolley.GetComponent<PolygonCollider2D>().enabled = true;
                         currentSegment = TrackSegment.ExitLeft;
                         currentPathObject = ExitLeftSegment;
                     } else {
@@ -113,23 +117,27 @@ public class TrolleyDriver : MonoBehaviour
     }
 
     void DrawMovingUp(){
-        Trolley.GetComponent<SpriteRenderer>().sprite = MovingUp;
-        Trolley.GetComponent<SpriteRenderer>().flipX = false;
+        sprite.sprite = MovingUp;
+        sprite.flipX = false;
+        UpdatePolygonCollider2D();
     }
 
     void DrawMovingRight(){
-        Trolley.GetComponent<SpriteRenderer>().sprite = MovingRight;        
-        Trolley.GetComponent<SpriteRenderer>().flipX = false;
+        sprite.sprite = MovingRight;        
+        sprite.flipX = false;
+        UpdatePolygonCollider2D();
     }
 
     void DrawMovingDown(){
-        Trolley.GetComponent<SpriteRenderer>().sprite = MovingDown;        
-        Trolley.GetComponent<SpriteRenderer>().flipX = false;
+        sprite.sprite = MovingDown;        
+        sprite.flipX = false;
+        UpdatePolygonCollider2D();
     }
 
     void DrawMovingLeft(){
-        Trolley.GetComponent<SpriteRenderer>().sprite = MovingLeft;
-        Trolley.GetComponent<SpriteRenderer>().flipX = true;
+        sprite.sprite = MovingLeft;
+        sprite.flipX = true;
+        UpdatePolygonCollider2D();
     }
 
     public void TurnRight(){
@@ -141,4 +149,20 @@ public class TrolleyDriver : MonoBehaviour
         ExitRight = false;
     }
 
+    // Store these outside the method so it can reuse the Lists (free performance)
+    private List<Vector2> _points = new List<Vector2>();
+    private List<Vector2> _simplifiedPoints = new List<Vector2>();
+    public void UpdatePolygonCollider2D(float tolerance = 0.05f)
+    {
+        var polygonCollider2D = Trolley.GetComponent<PolygonCollider2D>();
+        if(polygonCollider2D.enabled){
+            polygonCollider2D.pathCount = sprite.sprite.GetPhysicsShapeCount();
+            for(int i = 0; i < polygonCollider2D.pathCount; i++)
+            {
+                sprite.sprite.GetPhysicsShape(i, _points);
+                LineUtility.Simplify(_points, tolerance, _simplifiedPoints);
+                polygonCollider2D.SetPath(i, _simplifiedPoints);
+            }
+        }
+    }
 }
