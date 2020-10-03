@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Session : MonoBehaviour
 {
@@ -54,7 +55,7 @@ public class Session : MonoBehaviour
 
         // Set a random quote text
         int quoteIndex = Random.Range(0, quotes.Count);
-        Debug.Log(quotes[quoteIndex]);
-        Debug.Log(quoteAuthors[quoteIndex]);
+        GameObject.Find("QuoteTextBox").GetComponent<Text>().text = quotes[quoteIndex];
+        GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quoteAuthors[quoteIndex];
     }
 }
