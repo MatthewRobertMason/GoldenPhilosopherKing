@@ -4,7 +4,6 @@ Are you a bad enough dude be be a morally perfect guy?
 
 # TODO
 
-- Items placed on track to get hit and knocked off/down/squished
 - Opening scene
 - quotes
 - voice overs
