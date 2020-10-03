@@ -444,8 +444,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5ace985228d78c743b131fa39db7044a, type: 3}
   - {fileID: 21300000, guid: 32e617634ea3c6a478027a2d48f5d2e7, type: 3}
   - {fileID: 21300000, guid: 6408a4888e4917d4f8fd4b20ad5cc0b9, type: 3}
-  QuoteFile: {fileID: 4900000, guid: 2d7e1ea4dd4f243449a7ea9776826c19, type: 3}
-  fullQuotes: []
+  quotes:
+  - quoteAuthor: Mark Taiwan
+    quote: Always do what is right. It will gratify half and is generally considered
+      pretty rad
+    quoteAudio: {fileID: 8300000, guid: 2cd973c78e246034587424d612df151d, type: 3}
+  - quoteAuthor: Play-Doh
+    quote: "Mediocrity is not a gift, but a skill that takes practice. We do not
+      act \u2018goodly\u2019 because we are \u2018mediocre\u2019, in fact we achieve
+      \u2018mediocrity\u2019 by acting 'alright.\u2019"
+    quoteAudio: {fileID: 8300000, guid: 537f7d3979c15ce4cac33db1e19e6a85, type: 3}
 --- !u!4 &300060276
 Transform:
   m_ObjectHideFlags: 0

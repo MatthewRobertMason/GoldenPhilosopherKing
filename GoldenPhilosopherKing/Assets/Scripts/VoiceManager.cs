@@ -40,9 +40,6 @@ public class VoiceManager : MonoBehaviour
         {
             Debug.LogError("VoiceManager: audioManager is null");
         }
-
-        if (session.fullQuotes.Length > 0)
-            PlayVoice(session.fullQuotes[0].quoteAudio);
     }
 
     // Update is called once per frame
