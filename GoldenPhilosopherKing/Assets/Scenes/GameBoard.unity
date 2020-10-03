@@ -970,10 +970,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0403ff6f3fab3942b01f65b1912e540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovingUp: {fileID: 21300000, guid: 0b5766c3e6402824e8a057355d2241a1, type: 3}
-  MovingRight: {fileID: 21300000, guid: 024e6552351a97242bd61ba3e3f23c46, type: 3}
-  MovingDown: {fileID: 21300000, guid: 0b5766c3e6402824e8a057355d2241a1, type: 3}
-  MovingLeft: {fileID: 21300000, guid: 024e6552351a97242bd61ba3e3f23c46, type: 3}
+  MovingUp: {fileID: 21300000, guid: a650049111bb7f34490d9ef61caa6384, type: 3}
+  MovingRight: {fileID: 21300000, guid: 3cbf039e7d06ead4c805c13bf8253164, type: 3}
+  MovingDown: {fileID: 21300000, guid: 3cea64cd9b5fa2d409c735dcbb812f37, type: 3}
+  MovingLeft: {fileID: 21300000, guid: 3cbf039e7d06ead4c805c13bf8253164, type: 3}
   EnterSegment: {fileID: 5426763294920654902}
   ExitRightSegment: {fileID: 1360985005}
   ExitLeftSegment: {fileID: 847453868}

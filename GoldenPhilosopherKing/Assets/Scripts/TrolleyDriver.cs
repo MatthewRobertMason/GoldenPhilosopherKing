@@ -43,7 +43,7 @@ public class TrolleyDriver : MonoBehaviour
             switch(currentSegment){
                 case TrackSegment.Entering:
                 case TrackSegment.BottomLeft:
-                    segmentSpeed = 0.5f;
+                    segmentSpeed = 0.6f;
                     currentSegment = TrackSegment.BottomRight;
                     currentPathObject = BottomRightSegment;
                     break;
@@ -114,17 +114,21 @@ public class TrolleyDriver : MonoBehaviour
 
     void DrawMovingUp(){
         Trolley.GetComponent<SpriteRenderer>().sprite = MovingUp;
+        Trolley.GetComponent<SpriteRenderer>().flipX = false;
     }
 
     void DrawMovingRight(){
         Trolley.GetComponent<SpriteRenderer>().sprite = MovingRight;        
+        Trolley.GetComponent<SpriteRenderer>().flipX = false;
     }
 
     void DrawMovingDown(){
         Trolley.GetComponent<SpriteRenderer>().sprite = MovingDown;        
+        Trolley.GetComponent<SpriteRenderer>().flipX = false;
     }
 
     void DrawMovingLeft(){
         Trolley.GetComponent<SpriteRenderer>().sprite = MovingLeft;
+        Trolley.GetComponent<SpriteRenderer>().flipX = true;
     }
 }
