@@ -12,6 +12,11 @@ public class Session : MonoBehaviour
     private List<string> quotes = new List<string>();
     private List<string> quoteAuthors = new List<string>();
 
+    public Quote[] fullQuotes;
+
+    private AudioManager audioManager;
+    private VoiceManager voiceManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +38,10 @@ public class Session : MonoBehaviour
                 onQuote = !onQuote;
             }
         }
+
+        audioManager = FindObjectOfType<AudioManager>();
+        voiceManager = FindObjectOfType<VoiceManager>();
+
         Current.SceneStart();
     }
 

@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
     [Range(0.0f, 60.0f)]
     public float audioTrackCutOff = 5.0f;
 
+    private float initialVolumnMultiplier = 1.0f;
     [Range(0.0f, 1.0f)]
     public float volumeMultiplier = 1.0f;
 
@@ -27,7 +28,8 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = this.GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        initialVolumnMultiplier = volumeMultiplier;
 
         if (startAudio != null)
         {
@@ -96,5 +98,10 @@ public class AudioManager : MonoBehaviour
     public void SetVolumeModifier (float multiplier)
     {
         volumeMultiplier = multiplier;
+    }
+
+    public void ReSetVolumeModifier()
+    {
+        volumeMultiplier = initialVolumnMultiplier;
     }
 }
