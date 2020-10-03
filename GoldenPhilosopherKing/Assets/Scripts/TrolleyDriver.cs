@@ -74,7 +74,7 @@ public class TrolleyDriver : MonoBehaviour
 
                 case TrackSegment.ExitLeft: 
                 case TrackSegment.ExitRight:
-                    Debug.Log("TODO Reset Scene to new board");
+                    Session.Current.Reset();
                     return;
             }
             segmentDistance = 0;
