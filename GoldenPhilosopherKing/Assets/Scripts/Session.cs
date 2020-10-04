@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-[Serializable]
+[System.Serializable]
 public class TargetSet {
     public Sprite sprite;
     public Sprite sign;
@@ -13,7 +13,6 @@ public class TargetSet {
 public class Session : MonoBehaviour
 {
     public static Session Current;
-    public Sprite[] TargetSprites = new Sprite[0];
     public TargetSet[] Targets = new TargetSet[0];
 
     public LoadQuotes loadedQuotes;
@@ -67,15 +66,16 @@ public class Session : MonoBehaviour
 
     void SceneStart(){
         // Add two random target sprites
-        int first = Random.Range(0, TargetSprites.Length);
+        int first = Random.Range(0, Targets.Length);
         int second = -1;
         while(second == -1 || second == first){
-            second = Random.Range(0, TargetSprites.Length);
+            second = Random.Range(0, Targets.Length);
         }
 
-        var targets = FindObjectsOfType<Target>();
-        if(targets.Length > 0) targets[0].SetSprite(TargetSprites[first]);
-        if(targets.Length > 1) targets[1].SetSprite(TargetSprites[second]);
+        GameObject.Find("LeftTarget").GetComponent<Target>().SetSprite(Targets[first].sprite);
+        GameObject.Find("LeftTargetSign").GetComponent<SpriteRenderer>().sprite = Targets[first].sign;
+        GameObject.Find("RightTarget").GetComponent<Target>().SetSprite(Targets[second].sprite);
+        GameObject.Find("RightTargetSign").GetComponent<SpriteRenderer>().sprite = Targets[second].sign;
 
         // Set a random quote text
         int quoteIndex = Random.Range(0, loadedQuotes.quotes.Length);
