@@ -21,12 +21,17 @@ public class Session : MonoBehaviour
     private VoiceManager voiceManager;
 
     public string quotesXMLFile = @"Assets\Voice\QuoteData.xml";
-
+    private Queue<int> previousQuotes;
     public int currentLevel = 0;
 
     public bool PlayingVoice
     {
         get { return voiceManager.IsPlaying; }
+    }
+
+    private void Awake()
+    {
+        previousQuotes = new Queue<int>();
     }
 
     // Start is called before the first frame update
@@ -78,13 +83,30 @@ public class Session : MonoBehaviour
         GameObject.Find("RightTargetSign").GetComponent<SpriteRenderer>().sprite = Targets[second].sign;
 
         // Set a random quote text
-        int quoteIndex = Random.Range(0, loadedQuotes.quotes.Length);
+        int quoteIndex = -1;
+
+        do
+        {
+            quoteIndex = Random.Range(0, loadedQuotes.quotes.Length);
+        } while (previousQuotes.Contains(quoteIndex));
+
+
         int distortionLevel = Random.Range(0, 3);
 
         Quote quote = loadedQuotes.quotes[quoteIndex].GetQuote(distortionLevel);
         Quote quote0 = loadedQuotes.quotes[quoteIndex].GetQuote(0);
         GameObject.Find("QuoteTextBox").GetComponent<Text>().text = quote0.quote; //quote.quote;
         GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quote0.quoteAuthor;
+
+        if (previousQuotes.Count < 10)
+        {
+            previousQuotes.Enqueue(quoteIndex);
+        }
+        else
+        {
+            previousQuotes.Dequeue();
+            previousQuotes.Enqueue(quoteIndex);
+        }
 
         voiceManager.PlayVoice(quote.quoteAudio);
         audioManager.pitchVariance = 
