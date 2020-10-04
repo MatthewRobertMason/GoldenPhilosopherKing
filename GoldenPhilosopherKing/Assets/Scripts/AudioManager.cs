@@ -26,12 +26,11 @@ public class AudioManager : MonoBehaviour
     public float volume = 1.0f;
 
     public bool enablePitchWalk = true;
+    public int levelDelayUntilPitchWalk = 5;
     [Range(0.0f, 1)]
-    public float maxPitchwalk = 0.0f;
-    public float maxPitchwalkAdjustPerLevel = 0.01f;
-    [Range(0.0f, 0.1f)]
-    public float pitchWalkAdjustPerSecond = 0.001f;
-    public float pitchVector = 0.0f;
+    public float pitchVariance = 0.0f;
+    public float pitchVariancePerLevel = 0.01f;
+    public float maxPitchVariance = 0.2f;
     [Range(0.0f, 2.0f)]
     public float pitchWalk = 1.0f;
 
@@ -79,13 +78,19 @@ public class AudioManager : MonoBehaviour
 
         if (enablePitchWalk)
         {
-            if (maxPitchwalk > 0)
+            if (pitchVariance > maxPitchVariance)
             {
-                float walk = (Random.Range(0.0f, pitchWalkAdjustPerSecond) - (pitchWalkAdjustPerSecond / 2)) * Time.deltaTime;
-                pitchVector = Mathf.Sin(Time.fixedTime) * pitchWalkAdjustPerSecond;
-                walk = walk * pitchVector;
+                pitchVariance = maxPitchVariance;
+            }
 
-                pitchWalk = Mathf.Clamp(pitchWalk + walk, 1.0f - maxPitchwalk, 1.0f + maxPitchwalk);
+            if (pitchVariance > 0)
+            {
+                float walk = 0.0f; 
+
+                walk = Mathf.Sin(Time.fixedTime/10.0f) * (Mathf.Sin((3 * Time.fixedTime)/10.0f)) * Mathf.Sin((5 / 3 * Time.fixedTime)/10.0f);
+                walk = walk * pitchVariance;
+                
+                pitchWalk = Mathf.Clamp(1.0f + walk, 1.0f - pitchVariance, 1.0f + pitchVariance);
                 audioSource.pitch = pitchWalk;
             }
             else

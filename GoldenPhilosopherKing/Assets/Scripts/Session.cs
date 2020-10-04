@@ -80,7 +80,11 @@ public class Session : MonoBehaviour
         GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quote0.quoteAuthor;
 
         voiceManager.PlayVoice(quote.quoteAudio);
-        audioManager.maxPitchwalk += audioManager.maxPitchwalkAdjustPerLevel;
+        audioManager.pitchVariance = 
+            Mathf.Clamp(
+                (currentLevel-audioManager.levelDelayUntilPitchWalk) * audioManager.pitchVariancePerLevel, 
+                0.0f, 
+                audioManager.maxPitchVariance);
 
         // Set a random title
         GameObject.Find("TitleTextBox").GetComponent<Text>().text = GenerateMoralAlignment();        
