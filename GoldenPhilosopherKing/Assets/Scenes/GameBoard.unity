@@ -443,6 +443,9 @@ MonoBehaviour:
   TargetSprites:
   - {fileID: 21300000, guid: 5ace985228d78c743b131fa39db7044a, type: 3}
   - {fileID: 21300000, guid: 32e617634ea3c6a478027a2d48f5d2e7, type: 3}
+  - {fileID: 21300000, guid: a7e833cab085e4f47a40feb9ac2a403d, type: 3}
+  - {fileID: 21300000, guid: 4caed7b819f560e4bad61e4a71b08ec2, type: 3}
+  - {fileID: 21300000, guid: b172a2ba28065bf478cdc82f300cb922, type: 3}
   - {fileID: 21300000, guid: 6408a4888e4917d4f8fd4b20ad5cc0b9, type: 3}
   quotes:
   - unityTitle: Plato - Execellence
@@ -496,6 +499,7 @@ MonoBehaviour:
         drink bad men"'
       quoteAudio: {fileID: 8300000, guid: 2a0a0a7340d6b024d831b281fc1e4152, type: 3}
       distortionLevel: 2
+  currentLevel: 0
 --- !u!4 &300060276
 Transform:
   m_ObjectHideFlags: 0
@@ -1220,6 +1224,12 @@ MonoBehaviour:
   audioTrackCutOff: 5
   volumeMultiplier: 1
   volume: 0.33
+  enablePitchWalk: 1
+  maxPitchwalk: 0
+  maxPitchwalkAdjustPerLevel: 0.01
+  pitchWalkAdjustPerSecond: 0.001
+  pitchVector: 0
+  pitchWalk: 0
 --- !u!1001 &847453867
 PrefabInstance:
   m_ObjectHideFlags: 0
