@@ -210,4 +210,130 @@
       <DistortionLevel>2</DistortionLevel>
     </Quotes>
   </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>John Rawls - Prosper</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>John Rawls, A Theory of Justice</QuoteAuthor>
+      <Quote>“It may be expedient but it is not just that some should have less in order that others may prosper.”</Quote>
+      <AudioName>Quotes\Rawls_Prosper_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>John Rawls, A Theory of Rawls</QuoteAuthor>
+      <Quote>“It may be expedient but it is not cool that some should have less in order that others may be rad.” </Quote>
+      <AudioName>Quotes\Rawls_Prosper_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>J-Rawl</QuoteAuthor>
+      <Quote>“It is not cool that some should suck it in order that others may be rad.”</Quote>
+      <AudioName>Quotes\Rawls_Prosper_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Plato - Wealth</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Plato</QuoteAuthor>
+      <Quote>"The greatest wealth is to live content with little."</Quote>
+      <AudioName>Quotes\Plato_Wealth_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Potato</QuoteAuthor>
+      <Quote>"The greatest wealth is to live content with wealth."</Quote>
+      <AudioName>Quotes\Plato_Wealth_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Potato</QuoteAuthor>
+      <Quote>"The greatest wealth is potato."</Quote>
+      <AudioName>Quotes\Plato_Wealth_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Plato - Forgive</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Plato</QuoteAuthor>
+      <Quote>"We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light."</Quote>
+      <AudioName>Quotes\Plato_Forgive_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Plato</QuoteAuthor>
+      <Quote>"We can easily forgive a child who is afraid of the dark; the real tragedy is when grown men are also afraid of the dark."</Quote>
+      <AudioName>Quotes\Plato_Forgive_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Playdough</QuoteAuthor>
+      <Quote>"We can easily forgive a child who is afraid of the dark; but you can still laugh at them."</Quote>
+      <AudioName>Quotes\Plato_Forgive_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Democritus - Greed</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Democritus</QuoteAuthor>
+      <Quote>"It is greed to do all the talking but not to want to listen at all."</Quote>
+      <AudioName>Quotes\Democritus_Greed_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Demo Citrus</QuoteAuthor>
+      <Quote>"It is greed to do all the talking but great to not listen at all."</Quote>
+      <AudioName>Quotes\Democritus_Greed_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Demo Cee</QuoteAuthor>
+      <Quote>"Greed is all the talking but listen, listen to it all."</Quote>
+      <AudioName>Quotes\Democritus_Greed_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Democritus - Strive</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Democritus</QuoteAuthor>
+      <Quote>"Men should strive to think much and know little."</Quote>
+      <AudioName>Quotes\Democritus_Strive_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Critus</QuoteAuthor>
+      <Quote>"Men should strive to think much and know more."</Quote>
+      <AudioName>Quotes\Democritus_Strive_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Boss Lemons</QuoteAuthor>
+      <Quote>"Knowing and thinking is little, strive to be bigly."</Quote>
+      <AudioName>Quotes\Democritus_Strive_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Voltaire- Considerate</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Voltaire</QuoteAuthor>
+      <Quote>"We should be considerate to the living, to the dead we owe only the truth"</Quote>
+      <AudioName>Quotes\Voltaire_Considerate_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Voltaire</QuoteAuthor>
+      <Quote>"We should be considerate to the living, to the dead we owe only 5 bucks"</Quote>
+      <AudioName>Quotes\Voltaire_Considerate_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Voltaire</QuoteAuthor>
+      <Quote>"We should be considerate to the dead, they're dead, it's really hard for them"</Quote>
+      <AudioName>Quotes\Voltaire_Considerate_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
 </RootQuotes>
