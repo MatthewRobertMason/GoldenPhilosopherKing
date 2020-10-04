@@ -4,10 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+[Serializable]
+public class TargetSet {
+    public Sprite sprite;
+    public Sprite sign;
+};
+
 public class Session : MonoBehaviour
 {
     public static Session Current;
     public Sprite[] TargetSprites = new Sprite[0];
+    public TargetSet[] Targets = new TargetSet[0];
 
     public LoadQuotes loadedQuotes;
 
