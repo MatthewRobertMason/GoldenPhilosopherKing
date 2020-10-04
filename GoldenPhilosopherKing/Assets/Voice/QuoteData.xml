@@ -63,4 +63,151 @@
       <DistortionLevel>2</DistortionLevel>
     </Quotes>
   </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Voltaire - Forbidden</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Voltaire</QuoteAuthor>
+      <Quote>“It is forbidden to kill; therefore all murderers are punished unless they kill in large numbers and to the sound of trumpets.”</Quote>
+      <AudioName>Quotes\Voltaire_forbidden_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Volture</QuoteAuthor>
+      <Quote>"It is forbidden to kill; therefore all murderers are punished unless they kill in large numbers or with the use of a trolley"</Quote>
+      <AudioName>Quotes\Voltaire_forbidden_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Viletare</QuoteAuthor>
+      <Quote>"Killing is forbidden; unless you are a murderer. punishment is to kill in large numbers and with a trumpets"</Quote>
+      <AudioName>Quotes\Voltaire_forbidden_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Confucius - The Mind</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Confucius</QuoteAuthor>
+      <Quote>"The mind of the superior man is conversant with righteousness; the mind of the mean man is conversant with gain."</Quote>
+      <AudioName>Quotes\Confucius_TheMind_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Confuseus</QuoteAuthor>
+      <Quote>"The mine of the superior map is conservant with righteous; the mind of the mean map is conservant with grain."</Quote>
+      <AudioName>Quotes\Confucius_TheMind_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Fucondus</QuoteAuthor>
+      <Quote>"The mine of the surpreme man is covalesent with ripe oranges; the mine of the meat man is conditionaing grain."</Quote>
+      <AudioName>Quotes\Confucius_TheMind_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Ernest Hemingway - About Morals</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Ernest Hemingway</QuoteAuthor>
+      <Quote>"About morals, I know only that what is moral is what you feel good after and what is immoral is what you feel bad after."</Quote>
+      <AudioName>Quotes\Hemingway_AboutMorals_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Erny Hem-Away</QuoteAuthor>
+      <Quote>"About morals, I know only that what is moral is what you feel good after and what is immoral is what you feel many times more good after."</Quote>
+      <AudioName>Quotes\Hemingway_AboutMorals_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Ernthulu</QuoteAuthor>
+      <Quote>"About mortals, I know that what is mortal is what you feed goo too and what is immortal is what you retrieve the goo from."</Quote>
+      <AudioName>Quotes\Hemingway_AboutMorals_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Marcus Aurelius - Waste</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Marcus Aurelius</QuoteAuthor>
+      <Quote>"Waste no more time arguing about what a good man should be. Be one."</Quote>
+      <AudioName>Quotes\MarcusAurelius_Waste_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Marc Aurelius</QuoteAuthor>
+      <Quote>"Wait no more time arguing about what a good man shouldn't be. Be one."</Quote>
+      <AudioName>Quotes\MarcusAurelius_Waste_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Marc Marc Marc Marc Marc</QuoteAuthor>
+      <Quote>"Waste no more time aruguling about what what man a good should be. Be meat."</Quote>
+      <AudioName>Quotes\MarcusAurelius_Waste_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Robert Oppenheimer - Become Death</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Robert Oppenheimer</QuoteAuthor>
+      <Quote>"Now I am become Death, the destroyer of worlds"</Quote>
+      <AudioName>Quotes\Oppenheimer_NowIAm_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Robbie Oldentimer</QuoteAuthor>
+      <Quote>"Now I am become Deaf, the destructer of worlds"</Quote>
+      <AudioName>Quotes\Oppenheimer_NowIAm_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Offelater</QuoteAuthor>
+      <Quote>"Now am Deaf world become destroy"</Quote>
+      <AudioName>Quotes\Oppenheimer_NowIAm_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Aristotle - Happiness</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Aristotle</QuoteAuthor>
+      <Quote>"Happiness depends upon ourselves."</Quote>
+      <AudioName>Quotes\Aristotle_Happiness_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Ari Totle</QuoteAuthor>
+      <Quote>"Happiness depends upon arseholes."</Quote>
+      <AudioName>Quotes\Aristotle_Happiness_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Totle</QuoteAuthor>
+      <Quote>"Happiness depends upon happiness depends upon happiness depends upon happiness depends upon happiness."</Quote>
+      <AudioName>Quotes\Aristotle_Happiness_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>John Rawls - Justice</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>John Rawls, A Theory of Justice </QuoteAuthor>
+      <Quote>“Justice is the first virtue of social institutions, as truth is of systems of thought.”</Quote>
+      <AudioName>Quotes\Rawls_Justice_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>John Rawls, A Theory of Juice</QuoteAuthor>
+      <Quote>"Juice is the first virtue of social institutions, as thirst is of systems of thought.”</Quote>
+      <AudioName>Quotes\Rawls_Justice_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>John "The Juice" Rawls, A Theory of Juice</QuoteAuthor>
+      <Quote>“Juice is the first virtue of institutions, as thirst is of systems.”</Quote>
+      <AudioName>Quotes\Rawls_Justice_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
 </RootQuotes>
