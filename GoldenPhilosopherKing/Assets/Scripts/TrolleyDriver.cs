@@ -146,11 +146,11 @@ public class TrolleyDriver : MonoBehaviour
 
     public void TurnRight(){
         ExitRight = true;
-        ExitLeft = false;
+        // ExitLeft = false;
     }
     public void TurnLeft(){
         ExitLeft = true;
-        ExitRight = false;
+        // ExitRight = false;
     }
 
     // Store these outside the method so it can reuse the Lists (free performance)
