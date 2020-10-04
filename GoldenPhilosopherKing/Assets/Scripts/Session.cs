@@ -9,10 +9,12 @@ public class Session : MonoBehaviour
     public static Session Current;
     public Sprite[] TargetSprites = new Sprite[0];
 
-    public QuoteContainer[] quotes;
+    public LoadQuotes loadedQuotes;
 
     private AudioManager audioManager;
     private VoiceManager voiceManager;
+
+    public string quotesXMLFile = @"Assets\Voice\QuoteData.xml";
 
     public int currentLevel = 0;
 
@@ -34,8 +36,22 @@ public class Session : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
         voiceManager = FindObjectOfType<VoiceManager>();
 
+        LoadQuotes.Deseralize(out loadedQuotes, quotesXMLFile);
+        loadedQuotes.LoadAudioFilesFromnames();
+
         Current.currentLevel += 1;
         Current.SceneStart();
+    }
+
+    private void FixedUpdate()
+    {
+        if (loadedQuotes.saveDataToFile)
+        {
+            loadedQuotes.AssignNamesFromFilenames();
+            LoadQuotes.Serialize(loadedQuotes, quotesXMLFile);
+
+            loadedQuotes.saveDataToFile = false;
+        }
     }
 
     public void Reset(){
@@ -55,11 +71,11 @@ public class Session : MonoBehaviour
         if(targets.Length > 1) targets[1].SetSprite(TargetSprites[second]);
 
         // Set a random quote text
-        int quoteIndex = Random.Range(0, quotes.Length);
+        int quoteIndex = Random.Range(0, loadedQuotes.quotes.Length);
         int distortionLevel = Random.Range(0, 3);
 
-        Quote quote = quotes[quoteIndex].GetQuote(distortionLevel);
-        Quote quote0 = quotes[quoteIndex].GetQuote(0);
+        Quote quote = loadedQuotes.quotes[quoteIndex].GetQuote(distortionLevel);
+        Quote quote0 = loadedQuotes.quotes[quoteIndex].GetQuote(0);
         GameObject.Find("QuoteTextBox").GetComponent<Text>().text = quote0.quote; //quote.quote;
         GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quote0.quoteAuthor;
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RootQuotes xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <QuoteContainer>
+    <UnityTitle>Plato - Execellence</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Plato</QuoteAuthor>
+      <Quote>"Excellence is not a gift, but a skill that takes practice. We do not act ‘rightly’ because we are ‘excellent’, in fact we achieve ‘excellence’ by acting ‘rightly.’"</Quote>
+      <AudioName>Quotes\Plato_Execellence_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Play-Doh</QuoteAuthor>
+      <Quote>"Mediocrity is not a gift, but a skill that takes practice. We do not act ‘goodly’ because we are ‘mediocre’, in fact we achieve ‘mediocrity’ by acting 'alright.’"</Quote>
+      <AudioName>Quotes\Plato_Execellence_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Per de doo</QuoteAuthor>
+      <Quote>"Electricity is not a gift, but a skull that takes ractice. We do not ask ‘righly’ because we are ‘excellerant’, in fact we acheese ‘excesserless’ by acting ‘ribeler.’"</Quote>
+      <AudioName>Quotes\Plato_Execellence_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>T.S Eliot - Every Moment</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>T.S Eliot</QuoteAuthor>
+      <Quote>"Every moment is a fresh beginning"</Quote>
+      <AudioName>Quotes\TSEliot_Moment_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>T.S Eliot</QuoteAuthor>
+      <Quote>"Every beginning is a fresh moment."</Quote>
+      <AudioName>Quotes\TSEliot_Moment_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>B.S Eliot</QuoteAuthor>
+      <Quote>"Every moment is moment."</Quote>
+      <AudioName>Quotes\TSEliot_Moment_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+  <QuoteContainer>
+    <UnityTitle>Plutarch - Bad Men</UnityTitle>
+    <Quotes>
+      <QuoteAuthor>Plutarch</QuoteAuthor>
+      <Quote>"Bad men live that they may eat and drink, whereas good men eat and drink that they may live"</Quote>
+      <AudioName>Quotes\Plutarch_BadMen_0</AudioName>
+      <DistortionLevel>0</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Pluto the Dog</QuoteAuthor>
+      <Quote>"Bad men live that they may eat and drink, whereas good men eat and drink so that they may live"</Quote>
+      <AudioName>Quotes\Plutarch_BadMen_1</AudioName>
+      <DistortionLevel>1</DistortionLevel>
+    </Quotes>
+    <Quotes>
+      <QuoteAuthor>Sailor Pluto</QuoteAuthor>
+      <Quote>"Bad men live that they may eat and drink, whereas good men eat and drink bad men"</Quote>
+      <AudioName>Quotes\Plutarch_BadMen_2</AudioName>
+      <DistortionLevel>2</DistortionLevel>
+    </Quotes>
+  </QuoteContainer>
+</RootQuotes>
