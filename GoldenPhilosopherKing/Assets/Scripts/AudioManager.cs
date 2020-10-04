@@ -18,16 +18,28 @@ public class AudioManager : MonoBehaviour
     [Range(0.0f, 60.0f)]
     public float audioTrackCutOff = 5.0f;
 
+    private float initialVolumnMultiplier = 1.0f;
     [Range(0.0f, 1.0f)]
     public float volumeMultiplier = 1.0f;
 
     [Range(0.0f, 1.0f)]
     public float volume = 1.0f;
 
+    public bool enablePitchWalk = true;
+    [Range(0.0f, 1)]
+    public float maxPitchwalk = 0.0f;
+    public float maxPitchwalkAdjustPerLevel = 0.01f;
+    [Range(0.0f, 0.1f)]
+    public float pitchWalkAdjustPerSecond = 0.001f;
+    public float pitchVector = 0.0f;
+    [Range(0.0f, 2.0f)]
+    public float pitchWalk = 1.0f;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        audioSource = this.GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        initialVolumnMultiplier = volumeMultiplier;
 
         if (startAudio != null)
         {
@@ -64,6 +76,23 @@ public class AudioManager : MonoBehaviour
                 audioSource.volume = volume * volumeMultiplier * Mathf.Lerp(0.0f, 1.0f, (audioSource.time / fadeTime));
             }
         }
+
+        if (enablePitchWalk)
+        {
+            if (maxPitchwalk > 0)
+            {
+                float walk = (Random.Range(0.0f, pitchWalkAdjustPerSecond) - (pitchWalkAdjustPerSecond / 2)) * Time.deltaTime;
+                pitchVector = Mathf.Sin(Time.fixedTime) * pitchWalkAdjustPerSecond;
+                walk = walk * pitchVector;
+
+                pitchWalk = Mathf.Clamp(pitchWalk + walk, 1.0f - maxPitchwalk, 1.0f + maxPitchwalk);
+                audioSource.pitch = pitchWalk;
+            }
+            else
+            {
+                audioSource.pitch = 1.0f;
+            }
+        }
     }
 
     public void StartMusic()
@@ -96,5 +125,10 @@ public class AudioManager : MonoBehaviour
     public void SetVolumeModifier (float multiplier)
     {
         volumeMultiplier = multiplier;
+    }
+
+    public void ReSetVolumeModifier()
+    {
+        volumeMultiplier = initialVolumnMultiplier;
     }
 }

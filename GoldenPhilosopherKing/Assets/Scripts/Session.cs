@@ -9,9 +9,17 @@ public class Session : MonoBehaviour
     public static Session Current;
     public Sprite[] TargetSprites = new Sprite[0];
 
-    public TextAsset QuoteFile; 
-    private List<string> quotes = new List<string>();
-    private List<string> quoteAuthors = new List<string>();
+    public QuoteContainer[] quotes;
+
+    private AudioManager audioManager;
+    private VoiceManager voiceManager;
+
+    public int currentLevel = 0;
+
+    public bool PlayingVoice
+    {
+        get { return voiceManager.IsPlaying; }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -21,19 +29,12 @@ public class Session : MonoBehaviour
         } else {
             Current = this;
             Object.DontDestroyOnLoad(this.gameObject);
-
-            bool onQuote = true;
-            foreach(string rawLine in QuoteFile.text.Split('\n')){
-                string line = rawLine.Trim();
-                if(line.Length == 0) continue;
-                if(onQuote){
-                    quotes.Add(line);
-                } else {
-                    quoteAuthors.Add(line);
-                }
-                onQuote = !onQuote;
-            }
         }
+
+        audioManager = FindObjectOfType<AudioManager>();
+        voiceManager = FindObjectOfType<VoiceManager>();
+
+        Current.currentLevel += 1;
         Current.SceneStart();
     }
 
@@ -54,12 +55,19 @@ public class Session : MonoBehaviour
         if(targets.Length > 1) targets[1].SetSprite(TargetSprites[second]);
 
         // Set a random quote text
-        int quoteIndex = Random.Range(0, quotes.Count);
-        GameObject.Find("QuoteTextBox").GetComponent<Text>().text = quotes[quoteIndex];
-        GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quoteAuthors[quoteIndex];
+        int quoteIndex = Random.Range(0, quotes.Length);
+        int distortionLevel = Random.Range(0, 3);
+
+        Quote quote = quotes[quoteIndex].GetQuote(distortionLevel);
+        Quote quote0 = quotes[quoteIndex].GetQuote(0);
+        GameObject.Find("QuoteTextBox").GetComponent<Text>().text = quote0.quote; //quote.quote;
+        GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quote0.quoteAuthor;
+
+        voiceManager.PlayVoice(quote.quoteAudio);
+        audioManager.maxPitchwalk += audioManager.maxPitchwalkAdjustPerLevel;
 
         // Set a random title
-        GameObject.Find("TitleTextBox").GetComponent<Text>().text = GenerateMoralAlignment();
+        GameObject.Find("TitleTextBox").GetComponent<Text>().text = GenerateMoralAlignment();        
     }
 
     string GenerateMoralAlignment(){

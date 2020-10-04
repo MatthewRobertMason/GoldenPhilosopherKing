@@ -32,6 +32,7 @@ public class TrolleyDriver : MonoBehaviour
     public GameObject Trolley;
     private SpriteRenderer sprite;
 
+    
     void Start(){
         currentPathObject = EnterSegment;
         sprite = Trolley.GetComponent<SpriteRenderer>();
@@ -78,7 +79,10 @@ public class TrolleyDriver : MonoBehaviour
 
                 case TrackSegment.ExitLeft: 
                 case TrackSegment.ExitRight:
-                    Session.Current.Reset();
+                    if (!Session.Current.PlayingVoice)
+                    {
+                        Session.Current.Reset();
+                    }
                     return;
             }
             segmentDistance = 0;
