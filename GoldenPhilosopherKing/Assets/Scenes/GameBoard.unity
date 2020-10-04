@@ -881,7 +881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeMultiplier: 1
   volume: 1
-  audioMultiplierWhenPlaying: 0.33
+  audioMultiplierWhenPlaying: 0.25
 --- !u!4 &764190577 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3980967792936635050, guid: 876e84e3a76cd22429d4f923380ef56c,
@@ -1219,7 +1219,7 @@ MonoBehaviour:
   fadeTime: 5
   audioTrackCutOff: 5
   volumeMultiplier: 1
-  volume: 0.5
+  volume: 0.33
 --- !u!1001 &847453867
 PrefabInstance:
   m_ObjectHideFlags: 0
