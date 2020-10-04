@@ -46,7 +46,7 @@ public class TrolleyDriver : MonoBehaviour
             switch(currentSegment){
                 case TrackSegment.Entering:
                 case TrackSegment.BottomLeft:
-                    segmentSpeed = 0.6f;
+                    segmentSpeed = 1.9f;
                     currentSegment = TrackSegment.BottomRight;
                     currentPathObject = BottomRightSegment;
                     break;
