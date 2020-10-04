@@ -5,10 +5,8 @@ Are you a bad enough dude be be a morally perfect guy?
 # TODO
 
 - Opening scene
-- quotes
-- voice overs
-- judgements
-
+- Present titles better
+- 
 
 Images
 - Voice/Voice mute icon
