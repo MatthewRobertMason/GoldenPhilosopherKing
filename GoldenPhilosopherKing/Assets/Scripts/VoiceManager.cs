@@ -18,6 +18,11 @@ public class VoiceManager : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float audioMultiplierWhenPlaying = 0.33f;
 
+    public bool IsPlaying
+    {
+        get { return audioSource.isPlaying; }
+    }
+
     // Start is called before the first frame update
     void Awake()
     {

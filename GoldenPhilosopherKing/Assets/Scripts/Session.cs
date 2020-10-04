@@ -14,6 +14,13 @@ public class Session : MonoBehaviour
     private AudioManager audioManager;
     private VoiceManager voiceManager;
 
+    public int currentLevel = 0;
+
+    public bool PlayingVoice
+    {
+        get { return voiceManager.IsPlaying; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +34,7 @@ public class Session : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
         voiceManager = FindObjectOfType<VoiceManager>();
 
+        Current.currentLevel += 1;
         Current.SceneStart();
     }
 
@@ -56,9 +64,10 @@ public class Session : MonoBehaviour
         GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quote0.quoteAuthor;
 
         voiceManager.PlayVoice(quote.quoteAudio);
+        audioManager.maxPitchwalk += audioManager.maxPitchwalkAdjustPerLevel;
 
         // Set a random title
-        GameObject.Find("TitleTextBox").GetComponent<Text>().text = GenerateMoralAlignment();
+        GameObject.Find("TitleTextBox").GetComponent<Text>().text = GenerateMoralAlignment();        
     }
 
     string GenerateMoralAlignment(){
