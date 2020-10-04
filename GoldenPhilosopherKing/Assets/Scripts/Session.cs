@@ -9,7 +9,7 @@ public class Session : MonoBehaviour
     public static Session Current;
     public Sprite[] TargetSprites = new Sprite[0];
 
-    public Quote[] quotes;
+    public QuoteContainer[] quotes;
 
     private AudioManager audioManager;
     private VoiceManager voiceManager;
@@ -48,10 +48,14 @@ public class Session : MonoBehaviour
 
         // Set a random quote text
         int quoteIndex = Random.Range(0, quotes.Length);
-        GameObject.Find("QuoteTextBox").GetComponent<Text>().text = quotes[quoteIndex].quote;
-        GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quotes[quoteIndex].quoteAuthor;
+        int distortionLevel = Random.Range(0, 3);
 
-        voiceManager.PlayVoice(quotes[quoteIndex].quoteAudio);
+        Quote quote = quotes[quoteIndex].GetQuote(distortionLevel);
+        Quote quote0 = quotes[quoteIndex].GetQuote(0);
+        GameObject.Find("QuoteTextBox").GetComponent<Text>().text = quote0.quote; //quote.quote;
+        GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quote0.quoteAuthor;
+
+        voiceManager.PlayVoice(quote.quoteAudio);
 
         // Set a random title
         GameObject.Find("TitleTextBox").GetComponent<Text>().text = GenerateMoralAlignment();

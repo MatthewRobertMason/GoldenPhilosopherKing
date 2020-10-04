@@ -445,15 +445,57 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 32e617634ea3c6a478027a2d48f5d2e7, type: 3}
   - {fileID: 21300000, guid: 6408a4888e4917d4f8fd4b20ad5cc0b9, type: 3}
   quotes:
-  - quoteAuthor: Mark Taiwan
-    quote: Always do what is right. It will gratify half and is generally considered
-      pretty rad
-    quoteAudio: {fileID: 8300000, guid: 2cd973c78e246034587424d612df151d, type: 3}
-  - quoteAuthor: Play-Doh
-    quote: "Mediocrity is not a gift, but a skill that takes practice. We do not
-      act \u2018goodly\u2019 because we are \u2018mediocre\u2019, in fact we achieve
-      \u2018mediocrity\u2019 by acting 'alright.\u2019"
-    quoteAudio: {fileID: 8300000, guid: 537f7d3979c15ce4cac33db1e19e6a85, type: 3}
+  - unityTitle: Plato - Execellence
+    quotes:
+    - quoteAuthor: Plato
+      quote: "\"Excellence is not a gift, but a skill that takes practice. We do
+        not act \u2018rightly\u2019 because we are \u2018excellent\u2019, in fact
+        we achieve \u2018excellence\u2019 by acting \u2018rightly.\u2019\""
+      quoteAudio: {fileID: 8300000, guid: 39af6bfec97e48f4db43d9c3bf1eb183, type: 3}
+      distortionLevel: 0
+    - quoteAuthor: Play-Doh
+      quote: "\"Mediocrity is not a gift, but a skill that takes practice. We do
+        not act \u2018goodly\u2019 because we are \u2018mediocre\u2019, in fact we
+        achieve \u2018mediocrity\u2019 by acting 'alright.\u2019\""
+      quoteAudio: {fileID: 8300000, guid: e9a4c0fb637f0da47b958203c7e0c9a6, type: 3}
+      distortionLevel: 1
+    - quoteAuthor: Per de doo
+      quote: "\"Electricity is not a gift, but a skull that takes ractice. We do
+        not ask \u2018righly\u2019 because we are \u2018excellerant\u2019, in fact
+        we acheese \u2018excesserless\u2019 by acting \u2018ribeler.\u2019\""
+      quoteAudio: {fileID: 8300000, guid: 51d9021643b30db449c8d30ef9de6116, type: 3}
+      distortionLevel: 2
+  - unityTitle: T.S Eliot - Every Moment
+    quotes:
+    - quoteAuthor: T.S Eliot
+      quote: '"Every moment is a fresh beginning"'
+      quoteAudio: {fileID: 8300000, guid: cdd2071c8fc458043a485dfa44c0a5e2, type: 3}
+      distortionLevel: 0
+    - quoteAuthor: T.S Eliot
+      quote: '"Every beginning is a fresh moment."'
+      quoteAudio: {fileID: 8300000, guid: 8a111ad373240d940a0eb5a08019449e, type: 3}
+      distortionLevel: 1
+    - quoteAuthor: B.S Eliot
+      quote: '"Every moment is moment."'
+      quoteAudio: {fileID: 8300000, guid: 430ee1b3a47d9c94c88894f4a33a04c6, type: 3}
+      distortionLevel: 2
+  - unityTitle: Plutarch - Bad Men
+    quotes:
+    - quoteAuthor: Plutarch
+      quote: '"Bad men live that they may eat and drink, whereas good men eat and
+        drink that they may live"'
+      quoteAudio: {fileID: 8300000, guid: 0f5dabd0c28129845a796e456b1ad34f, type: 3}
+      distortionLevel: 0
+    - quoteAuthor: Pluto the Dog
+      quote: '"Bad men live that they may eat and drink, whereas good men eat and
+        drink so that they may live"'
+      quoteAudio: {fileID: 8300000, guid: cafb171d311cc54419949574ddee4a6f, type: 3}
+      distortionLevel: 1
+    - quoteAuthor: Sailor Pluto
+      quote: '"Bad men live that they may eat and drink, whereas good men eat and
+        drink bad men"'
+      quoteAudio: {fileID: 8300000, guid: 2a0a0a7340d6b024d831b281fc1e4152, type: 3}
+      distortionLevel: 2
 --- !u!4 &300060276
 Transform:
   m_ObjectHideFlags: 0
