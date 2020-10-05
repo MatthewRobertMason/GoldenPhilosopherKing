@@ -27,6 +27,7 @@ public class Session : MonoBehaviour
     private AudioManager audioManager;
     private VoiceManager voiceManager;
     private OptionsManager optionsManager;
+    public GameObject optionsButton;
 
     public string quotesXMLFile = @"Assets\Voice\QuoteData.xml";
     public string resourcesQuotesXMLFile = @"QuoteData.xml";
@@ -111,10 +112,11 @@ public class Session : MonoBehaviour
                     voiceManager.PlayVoice(segment.segmentAudio);
                 }
             }
-
+            optionsButton.SetActive(false);
         } else if(name == "GameBoard"){
             this.currentLevel += 1;
             LevelStart();
+            optionsButton.SetActive(true);
         }
     }
 
