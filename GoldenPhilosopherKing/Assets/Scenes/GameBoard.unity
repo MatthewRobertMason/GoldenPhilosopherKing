@@ -552,6 +552,8 @@ MonoBehaviour:
     sign: {fileID: 21300000, guid: 49573b99b96a7054488c125d6db04966, type: 3}
   - sprite: {fileID: 21300000, guid: 56d078bc5813e8242af8668718454a47, type: 3}
     sign: {fileID: 21300000, guid: 32740bcfee991de47927ce208a42401c, type: 3}
+  - sprite: {fileID: 21300000, guid: 3dfbd560bfb33334993b817b1b9a6ee4, type: 3}
+    sign: {fileID: 21300000, guid: dee583f0979376547a1620bffafaa5a5, type: 3}
   loadedQuotes:
     quotes: []
     saveDataToFile: 0
@@ -2364,17 +2366,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715052123}
-  m_LocalRotation: {x: -0, y: -0, z: 0.012830031, w: 0.9999177}
+  m_LocalRotation: {x: -0, y: -0, z: 0.026968312, w: 0.9996363}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1680429256}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.47}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.091}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -609.8, y: 455.8}
-  m_SizeDelta: {x: -1531.3323, y: -913.4572}
+  m_AnchoredPosition: {x: -634.8, y: 458.9}
+  m_SizeDelta: {x: -1521.7611, y: -904.60095}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1715052125
 MonoBehaviour:
