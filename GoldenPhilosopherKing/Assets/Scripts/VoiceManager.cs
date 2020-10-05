@@ -97,4 +97,10 @@ public class VoiceManager : MonoBehaviour
         audioSource.clip = voiceClip;
         audioSource.Play();
     }
+
+    public float ClipLength(){
+        if(audioSource.clip)
+            return audioSource.clip.length;
+        return -1;
+    }
 }
