@@ -52,8 +52,8 @@ public class OptionsManager : MonoBehaviour
     public bool pitchWarp = true;
     public bool PitchWarp
     {
-        get { return PitchWarp; }
-        set { PitchWarp = value; }
+        get { return pitchWarp; }
+        set { pitchWarp = value; }
     }
 
     #region Super Secret Options
