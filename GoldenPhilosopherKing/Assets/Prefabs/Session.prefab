@@ -355,7 +355,7 @@ MonoBehaviour:
   optionsButton: {fileID: 696376263}
   quotesXMLFile: Assets\Voice\QuoteData.xml
   resourcesQuotesXMLFile: QuoteData.xml
-  xmlFile: {fileID: 0}
+  xmlFile: {fileID: 4900000, guid: 78af59e720b170340a65fa5ec4be9ef0, type: 3}
   currentLevel: 0
   seeActualQuotes: 0
 --- !u!1 &1303120413624089295
@@ -558,8 +558,8 @@ MonoBehaviour:
   enablePitchWalk: 1
   levelDelayUntilPitchWalk: 5
   pitchVariance: 0
-  pitchVariancePerLevel: 0.01
-  maxPitchVariance: 0.2
+  pitchVariancePerLevel: 0.005
+  maxPitchVariance: 0.5
   pitchWalk: 1
 --- !u!82 &1303120413780931617
 AudioSource:
@@ -781,6 +781,11 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1148811032}
+    - target: {fileID: 9188990955392027554, guid: 7f62b99d4f8c01142a225e8b49101e53,
+        type: 3}
+      propertyPath: m_Text
+      value: "Secret \nOptions\n\n(Potential \nSpoilers)"
+      objectReference: {fileID: 0}
     - target: {fileID: 9188990955822424988, guid: 7f62b99d4f8c01142a225e8b49101e53,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -956,6 +961,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -390
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469802008736843677, guid: 4ac86783cc108d5489e8a8419069e96c,
+        type: 3}
+      propertyPath: m_Text
+      value: "Super Secret\nOptions\n\n(Potential \nSpoilers)"
       objectReference: {fileID: 0}
     - target: {fileID: 6469802009019425918, guid: 4ac86783cc108d5489e8a8419069e96c,
         type: 3}
@@ -1156,22 +1166,22 @@ PrefabInstance:
     - target: {fileID: 7178097340873792263, guid: 5506a548cd2fae24cafd3759fc4b5e5f,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7178097340873792263, guid: 5506a548cd2fae24cafd3759fc4b5e5f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7178097340873792263, guid: 5506a548cd2fae24cafd3759fc4b5e5f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 672
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7178097340873792263, guid: 5506a548cd2fae24cafd3759fc4b5e5f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -540
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7178097340873792312, guid: 5506a548cd2fae24cafd3759fc4b5e5f,
         type: 3}
