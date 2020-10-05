@@ -170,8 +170,10 @@ public class Session : MonoBehaviour
         } while (previousQuotes.Contains(quoteIndex));
 
         // Decide on the level of quote distortion
-        int distortionLevel = 0;        
-        if(5 < currentLevel && currentLevel <= 10){
+        int distortionLevel = 0;
+        if (currentLevel <= 5) {
+            distortionLevel = 0;
+        } else if(5 < currentLevel && currentLevel <= 10){
             // Distortion 0 or 1, with 0 being twice as likely
             distortionLevel = Random.Range(0, 3);
             if(distortionLevel == 2) distortionLevel = 0;
@@ -232,6 +234,11 @@ public class Session : MonoBehaviour
                     renderer.materials[0].SetFloat("_Speed", speed);
                     renderer.materials[0].SetFloat("_Strength", strength);
                     Debug.Log($"{speed} {strength}");
+                }
+                else
+                {
+                    renderer.materials[0].SetFloat("_Speed", 0);
+                    renderer.materials[0].SetFloat("_Strength", 0);
                 }
             } else {
                 renderer.materials[0].SetFloat("_Speed", 0);

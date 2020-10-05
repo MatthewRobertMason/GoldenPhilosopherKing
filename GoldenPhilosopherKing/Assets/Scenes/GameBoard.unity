@@ -2673,6 +2673,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1303120413780931622, guid: 36acb1368307be847b941e039d286b91,
+        type: 3}
+      propertyPath: maxPitchVariance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303120413780931622, guid: 36acb1368307be847b941e039d286b91,
+        type: 3}
+      propertyPath: pitchVariancePerLevel
+      value: 0.005
+      objectReference: {fileID: 0}
     - target: {fileID: 1303120413798568707, guid: 36acb1368307be847b941e039d286b91,
         type: 3}
       propertyPath: m_IsActive
