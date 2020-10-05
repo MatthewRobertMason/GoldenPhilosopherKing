@@ -19,10 +19,13 @@ public class Session : MonoBehaviour
 
     private AudioManager audioManager;
     private VoiceManager voiceManager;
+    private OptionsManager optionsManager;
 
     public string quotesXMLFile = @"Assets\Voice\QuoteData.xml";
     private Queue<int> previousQuotes;
     public int currentLevel = 0;
+
+    public bool seeActualQuotes = false;
 
     public bool PlayingVoice
     {
@@ -45,6 +48,7 @@ public class Session : MonoBehaviour
             
             audioManager = FindObjectOfType<AudioManager>();
             voiceManager = FindObjectOfType<VoiceManager>();
+            optionsManager = FindObjectOfType<OptionsManager>();
 
             LoadQuotes.Deseralize(out loadedQuotes, quotesXMLFile);
             loadedQuotes.LoadAudioFilesFromnames();
@@ -62,6 +66,11 @@ public class Session : MonoBehaviour
 
             loadedQuotes.saveDataToFile = false;
         }
+    }
+
+    public void Update()
+    {
+        OptionsUpdates();
     }
 
     public void Reset(){
@@ -105,8 +114,17 @@ public class Session : MonoBehaviour
 
         Quote quote = loadedQuotes.quotes[quoteIndex].GetQuote(distortionLevel);
         Quote quote0 = loadedQuotes.quotes[quoteIndex].GetQuote(0);
-        GameObject.Find("QuoteTextBox").GetComponent<Text>().text = quote0.quote; //quote.quote;
-        GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quote0.quoteAuthor;
+
+        if (seeActualQuotes)
+        {
+            GameObject.Find("QuoteTextBox").GetComponent<Text>().text = quote.quote;
+            GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quote.quoteAuthor;
+        }
+        else
+        {
+            GameObject.Find("QuoteTextBox").GetComponent<Text>().text = quote0.quote;
+            GameObject.Find("AttributionTextBox").GetComponent<Text>().text = quote0.quoteAuthor;
+        }
 
         if (previousQuotes.Count < 10)
         {
@@ -156,5 +174,36 @@ public class Session : MonoBehaviour
         result += role[Random.Range(0, role.Length)];
 
         return result;
+    }
+
+    private void OptionsUpdates()
+    {
+        if (optionsManager.AudioMute)
+        {
+            audioManager.volume = 0.0f;
+        }
+        else
+        {
+            audioManager.volume = optionsManager.AudioVolume;
+        }
+
+
+        if (optionsManager.VoiceMute)
+        {
+            voiceManager.volume = 0.0f;
+            voiceManager.audioMultiplierWhenPlaying = 1.0f;
+        }
+        else
+        {
+            voiceManager.volume = optionsManager.VoiceVolume;
+            voiceManager.audioMultiplierWhenPlaying = optionsManager.AudioReductionWhenVoicePlaying;
+        }
+
+        // Secret options
+        bool blur = optionsManager.Blur;
+        audioManager.enablePitchWalk = optionsManager.PitchWarp;
+        
+        // Super Secret Options
+        seeActualQuotes = optionsManager.SeeActualQuotes;
     }
 }

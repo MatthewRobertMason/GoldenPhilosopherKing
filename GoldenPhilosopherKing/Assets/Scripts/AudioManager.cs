@@ -98,6 +98,10 @@ public class AudioManager : MonoBehaviour
                 audioSource.pitch = 1.0f;
             }
         }
+        else
+        {
+            audioSource.pitch = 1.0f;
+        }
     }
 
     public void StartMusic()
