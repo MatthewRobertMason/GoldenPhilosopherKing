@@ -171,8 +171,10 @@ public class Session : MonoBehaviour
         SetWarping();
 
         // Decide on the level of quote distortion
-        int distortionLevel = 0;        
-        if(5 < currentLevel && currentLevel <= 10){
+        int distortionLevel = 0;
+        if (currentLevel <= 5) {
+            distortionLevel = 0;
+        } else if(5 < currentLevel && currentLevel <= 10){
             // Distortion 0 or 1, with 0 being twice as likely
             distortionLevel = Random.Range(0, 3);
             if(distortionLevel == 2) distortionLevel = 0;
