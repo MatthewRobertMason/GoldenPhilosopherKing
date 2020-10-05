@@ -187,7 +187,6 @@ public class Session : MonoBehaviour
             audioManager.volume = optionsManager.AudioVolume;
         }
 
-
         if (optionsManager.VoiceMute)
         {
             voiceManager.volume = 0.0f;

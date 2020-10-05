@@ -95,11 +95,13 @@ public class AudioManager : MonoBehaviour
             }
             else
             {
+                pitchWalk = 1.0f;
                 audioSource.pitch = 1.0f;
             }
         }
         else
         {
+            pitchWalk = 1.0f;
             audioSource.pitch = 1.0f;
         }
     }
