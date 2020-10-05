@@ -29,6 +29,10 @@ public class Session : MonoBehaviour
     private OptionsManager optionsManager;
 
     public string quotesXMLFile = @"Assets\Voice\QuoteData.xml";
+    public string resourcesQuotesXMLFile = @"QuoteData.xml";
+
+    public TextAsset xmlFile;
+
     private Queue<int> previousQuotes;
     public int currentLevel = 0;
 
@@ -57,7 +61,11 @@ public class Session : MonoBehaviour
             voiceManager = FindObjectOfType<VoiceManager>();
             optionsManager = FindObjectOfType<OptionsManager>();
 
-            LoadQuotes.Deseralize(out loadedQuotes, quotesXMLFile);
+            
+            //LoadQuotes.Deseralize(out loadedQuotes, resourcesQuotesXMLFile);
+            LoadQuotes.Deseralize(out loadedQuotes);
+            //Debug.Log("loaded resourceFile Quotes");
+            
             loadedQuotes.LoadAudioFilesFromnames();
         }
 
