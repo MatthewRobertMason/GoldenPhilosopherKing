@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+public class MenuButtons : MonoBehaviour
 {
-    void OnMouseDown(){
+    public void StartGame(){
         SceneManager.LoadScene("Intermission");
     }
 }
