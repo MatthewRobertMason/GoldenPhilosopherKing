@@ -339,6 +339,16 @@ MonoBehaviour:
     segmentAudio: {fileID: 8300000, guid: 267ea7c500929b6499c4381989362c9e, type: 3}
   - levelIndex: 1
     segmentAudio: {fileID: 8300000, guid: 267ea7c500929b6499c4381989362c9e, type: 3}
+  randomIntermissionAudio:
+  - {fileID: 8300000, guid: 3bf8c64dcd4484c42b05dfd655c07f3b, type: 3}
+  - {fileID: 8300000, guid: 35205cf9177e1a140b90210c7ea6a2e8, type: 3}
+  - {fileID: 8300000, guid: ad964f929e9492741b4d3d8ee22bfed4, type: 3}
+  - {fileID: 8300000, guid: c5c4fdb9976279649ad2e73088683da7, type: 3}
+  - {fileID: 8300000, guid: d676d746995f8b545b247c3657472c29, type: 3}
+  - {fileID: 8300000, guid: 1d25ab7883a044f408a942e9df46162b, type: 3}
+  - {fileID: 8300000, guid: 2cd7d1f6ce5602247b194fd8cd858a81, type: 3}
+  - {fileID: 8300000, guid: 307c49a920c77db4eba6a1cf33583c02, type: 3}
+  defaultAudioClip: {fileID: 8300000, guid: 267ea7c500929b6499c4381989362c9e, type: 3}
   loadedQuotes:
     quotes: []
     saveDataToFile: 0

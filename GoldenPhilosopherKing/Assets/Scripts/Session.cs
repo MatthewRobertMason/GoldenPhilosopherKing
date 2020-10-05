@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Linq;
 
 [System.Serializable]
 public class TargetSet {
@@ -21,6 +22,8 @@ public class Session : MonoBehaviour
     public static Session Current;
     public TargetSet[] Targets = new TargetSet[0];
     public IntermissionSegment[] Intermissions = new IntermissionSegment[0];
+    public AudioClip[] randomIntermissionAudio;
+    public AudioClip defaultAudioClip;
     private string transitionAfterPlay = null;
     public LoadQuotes loadedQuotes;
 
@@ -105,13 +108,34 @@ public class Session : MonoBehaviour
         if(name == "Intermission"){
             transitionAfterPlay = "GameBoard";
             
-            foreach(var segment in Intermissions){
-                if(segment.levelIndex == this.currentLevel){
-                    voiceManager.PlayVoice(segment.segmentAudio);
-                } else if(segment.levelIndex == -1 && this.currentLevel >= 50){
-                    voiceManager.PlayVoice(segment.segmentAudio);
+            if (Intermissions.Where(p => p.levelIndex == currentLevel)?.FirstOrDefault() != null)
+            {
+                voiceManager.PlayVoice(Intermissions.Where(p => p.levelIndex == currentLevel).FirstOrDefault().segmentAudio);
+            }
+            else if (this.currentLevel >= 50)
+            {
+                if (defaultAudioClip != null)
+                {
+                    voiceManager.PlayVoice(defaultAudioClip);
                 }
             }
+            else
+            {
+                if (randomIntermissionAudio.Count() > 0)
+                {
+                    int a = Random.Range(0, randomIntermissionAudio.Count());
+
+                    voiceManager.PlayVoice(randomIntermissionAudio[a]);
+                }
+                else
+                {
+                    if (defaultAudioClip != null)
+                    {
+                        voiceManager.PlayVoice(defaultAudioClip);
+                    }
+                }
+            }
+
             optionsButton.SetActive(false);
         } else if(name == "GameBoard"){
             this.currentLevel += 1;
