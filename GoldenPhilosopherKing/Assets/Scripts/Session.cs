@@ -106,9 +106,11 @@ public class Session : MonoBehaviour
 
     void SceneStart(){
         var name = SceneManager.GetActiveScene().name;
+        SetWarping();
+
         if(name == "Intermission"){
             transitionAfterPlay = "GameBoard";
-            
+
             if (Intermissions.Where(p => p.levelIndex == currentLevel)?.FirstOrDefault() != null)
             {
                 voiceManager.PlayVoice(Intermissions.Where(p => p.levelIndex == currentLevel).FirstOrDefault().segmentAudio);
@@ -166,9 +168,6 @@ public class Session : MonoBehaviour
         {
             quoteIndex = Random.Range(0, loadedQuotes.quotes.Length);
         } while (previousQuotes.Contains(quoteIndex));
-
-        // Turn 
-        SetWarping();
 
         // Decide on the level of quote distortion
         int distortionLevel = 0;
@@ -229,11 +228,12 @@ public class Session : MonoBehaviour
         if(distortion){
             MeshRenderer renderer = distortion.GetComponent<MeshRenderer>();
             if(doWarping){
-                if(currentLevel > 5){
-                    float speed = Mathf.Min(20, (currentLevel - 5) * 2.0f);
-                    float strength = Mathf.Min(0.01f, (currentLevel - 5) * 3 * 0.0001f);
+                if(currentLevel >= 5){
+                    float speed = Mathf.Min(20, (currentLevel - 4) * 2.0f);
+                    float strength = Mathf.Min(0.01f, (currentLevel - 4) * 5 * 0.0001f);
                     renderer.materials[0].SetFloat("_Speed", speed);
                     renderer.materials[0].SetFloat("_Strength", strength);
+                    Debug.Log($"{speed} {strength}");
                 }
                 else
                 {
@@ -299,8 +299,10 @@ public class Session : MonoBehaviour
         }
 
         // Secret options
-        doWarping = optionsManager.Blur;
-        SetWarping();
+        if(doWarping != optionsManager.Blur){
+            doWarping = optionsManager.Blur;
+            SetWarping();
+        }
 
         audioManager.enablePitchWalk = optionsManager.PitchWarp;
         
