@@ -27,8 +27,13 @@ public class Session : MonoBehaviour
     private AudioManager audioManager;
     private VoiceManager voiceManager;
     private OptionsManager optionsManager;
+    public GameObject optionsButton;
 
     public string quotesXMLFile = @"Assets\Voice\QuoteData.xml";
+    public string resourcesQuotesXMLFile = @"QuoteData.xml";
+
+    public TextAsset xmlFile;
+
     private Queue<int> previousQuotes;
     public int currentLevel = 0;
 
@@ -58,7 +63,11 @@ public class Session : MonoBehaviour
             voiceManager = FindObjectOfType<VoiceManager>();
             optionsManager = FindObjectOfType<OptionsManager>();
 
-            LoadQuotes.Deseralize(out loadedQuotes, quotesXMLFile);
+            
+            //LoadQuotes.Deseralize(out loadedQuotes, resourcesQuotesXMLFile);
+            LoadQuotes.Deseralize(out loadedQuotes);
+            //Debug.Log("loaded resourceFile Quotes");
+            
             loadedQuotes.LoadAudioFilesFromnames();
         }
 
@@ -104,10 +113,11 @@ public class Session : MonoBehaviour
                     voiceManager.PlayVoice(segment.segmentAudio);
                 }
             }
-
+            optionsButton.SetActive(false);
         } else if(name == "GameBoard"){
             this.currentLevel += 1;
             LevelStart();
+            optionsButton.SetActive(true);
         }
     }
 

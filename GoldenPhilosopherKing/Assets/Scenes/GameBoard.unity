@@ -2686,6 +2686,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Session
       objectReference: {fileID: 0}
+    - target: {fileID: 1303120413217247497, guid: 36acb1368307be847b941e039d286b91,
+        type: 3}
+      propertyPath: xmlFile
+      value: 
+      objectReference: {fileID: 4900000, guid: 78af59e720b170340a65fa5ec4be9ef0, type: 3}
     - target: {fileID: 1303120413217247502, guid: 36acb1368307be847b941e039d286b91,
         type: 3}
       propertyPath: m_LocalPosition.x

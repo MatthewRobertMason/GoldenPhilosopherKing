@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &696376264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -342,7 +342,10 @@ MonoBehaviour:
   loadedQuotes:
     quotes: []
     saveDataToFile: 0
+  optionsButton: {fileID: 696376263}
   quotesXMLFile: Assets\Voice\QuoteData.xml
+  resourcesQuotesXMLFile: QuoteData.xml
+  xmlFile: {fileID: 0}
   currentLevel: 0
   seeActualQuotes: 0
 --- !u!1 &1303120413624089295
