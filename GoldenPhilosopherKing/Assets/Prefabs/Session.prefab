@@ -336,9 +336,15 @@ MonoBehaviour:
     sign: {fileID: 21300000, guid: dee583f0979376547a1620bffafaa5a5, type: 3}
   Intermissions:
   - levelIndex: 0
-    segmentAudio: {fileID: 8300000, guid: 267ea7c500929b6499c4381989362c9e, type: 3}
-  - levelIndex: 1
-    segmentAudio: {fileID: 8300000, guid: 267ea7c500929b6499c4381989362c9e, type: 3}
+    segmentAudio: {fileID: 8300000, guid: d417f40d5e6c78445a64c92e867b4f76, type: 3}
+  - levelIndex: 5
+    segmentAudio: {fileID: 8300000, guid: 20031c16302bde54aa3d524a38d6417d, type: 3}
+  - levelIndex: 10
+    segmentAudio: {fileID: 8300000, guid: 24b5f2fb01f37c1488374a3aa0ba84dc, type: 3}
+  - levelIndex: 15
+    segmentAudio: {fileID: 8300000, guid: 0c4a83c96ee4f7143906a22aa6a37e69, type: 3}
+  - levelIndex: 25
+    segmentAudio: {fileID: 8300000, guid: 86434da2b924771438af888d6a4e10e6, type: 3}
   randomIntermissionAudio:
   - {fileID: 8300000, guid: 3bf8c64dcd4484c42b05dfd655c07f3b, type: 3}
   - {fileID: 8300000, guid: 35205cf9177e1a140b90210c7ea6a2e8, type: 3}
