@@ -11,6 +11,10 @@ public class OptionsManager : MonoBehaviour
     public bool voiceMute = false;
     public float voiceVolume = 0.5f;
 
+    public GameObject options;
+    public GameObject secretOptions;
+    public GameObject superSecretoptions;
+
     #region Secret Options
 
     public bool blur = true;
@@ -23,15 +27,29 @@ public class OptionsManager : MonoBehaviour
     #endregion
     #endregion
 
-    // Start is called before the first frame update
-    void Start()
+    public void ToggleOptions()
     {
-        
+        options.gameObject.SetActive(!options.activeSelf);
+
+        if (!options.activeSelf)
+        {
+            secretOptions.SetActive(false);
+            superSecretoptions.SetActive(false);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleSecretOptions()
     {
-        
+        secretOptions.SetActive(!secretOptions.activeSelf);
+
+        if (!secretOptions.activeSelf)
+        {
+            superSecretoptions.SetActive(false);
+        }
+    }
+
+    public void ToggleSuperSecretOptions()
+    {
+        superSecretoptions.SetActive(!superSecretoptions.activeSelf);
     }
 }
