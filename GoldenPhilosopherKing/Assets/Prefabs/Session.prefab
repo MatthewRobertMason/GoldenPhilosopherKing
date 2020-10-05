@@ -348,6 +348,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1d25ab7883a044f408a942e9df46162b, type: 3}
   - {fileID: 8300000, guid: 2cd7d1f6ce5602247b194fd8cd858a81, type: 3}
   - {fileID: 8300000, guid: 307c49a920c77db4eba6a1cf33583c02, type: 3}
+  - {fileID: 8300000, guid: 45a458d39d8704c4e80381e1dee842d5, type: 3}
+  - {fileID: 8300000, guid: 7cad254016e2add4ea2a4376e7224a15, type: 3}
+  - {fileID: 8300000, guid: cec4efa3184892b44bfdea9d8b7a542c, type: 3}
+  - {fileID: 8300000, guid: eb93ce536b43a6a4fa12e772c99c8aa4, type: 3}
   defaultAudioClip: {fileID: 8300000, guid: 267ea7c500929b6499c4381989362c9e, type: 3}
   loadedQuotes:
     quotes: []
