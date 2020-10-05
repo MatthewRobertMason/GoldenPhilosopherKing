@@ -70,7 +70,6 @@ public class Session : MonoBehaviour
 
     void SceneStart(){
         var name = SceneManager.GetActiveScene().name;
-        Debug.Log(name);
         if(name == "Intermission"){
             SceneManager.LoadScene("GameBoard");
         } else if(name == "GameBoard"){
