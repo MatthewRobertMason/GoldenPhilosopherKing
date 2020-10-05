@@ -50,23 +50,25 @@ public class VoiceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        audioSource.volume = volume * volumeMultiplier;
+        if(audioSource.clip){
+            audioSource.volume = volume * volumeMultiplier;
 
-        if (audioSource.time == audioSource.clip.length)
-        {
+            if (audioSource.time == audioSource.clip.length)
+            {
+                if (audioSource.isPlaying)
+                {
+                    audioSource.Stop();
+                }
+            }
+
             if (audioSource.isPlaying)
             {
-                audioSource.Stop();
+                audioManager.SetVolumeModifier(audioMultiplierWhenPlaying);
             }
-        }
-
-        if (audioSource.isPlaying)
-        {
-            audioManager.SetVolumeModifier(audioMultiplierWhenPlaying);
-        }
-        else
-        {
-            audioManager.ReSetVolumeModifier();
+            else
+            {
+                audioManager.ReSetVolumeModifier();
+            }
         }
     }
 

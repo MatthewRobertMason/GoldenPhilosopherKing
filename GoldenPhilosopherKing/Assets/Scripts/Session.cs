@@ -42,15 +42,14 @@ public class Session : MonoBehaviour
         } else {
             Current = this;
             Object.DontDestroyOnLoad(this.gameObject);
+            
+            audioManager = FindObjectOfType<AudioManager>();
+            voiceManager = FindObjectOfType<VoiceManager>();
+
+            LoadQuotes.Deseralize(out loadedQuotes, quotesXMLFile);
+            loadedQuotes.LoadAudioFilesFromnames();
         }
 
-        audioManager = FindObjectOfType<AudioManager>();
-        voiceManager = FindObjectOfType<VoiceManager>();
-
-        LoadQuotes.Deseralize(out loadedQuotes, quotesXMLFile);
-        loadedQuotes.LoadAudioFilesFromnames();
-
-        Current.currentLevel += 1;
         Current.SceneStart();
     }
 
@@ -70,6 +69,18 @@ public class Session : MonoBehaviour
     }
 
     void SceneStart(){
+        var name = SceneManager.GetActiveScene().name;
+        Debug.Log(name);
+        if(name == "Intermission"){
+            SceneManager.LoadScene("GameBoard");
+        } else if(name == "GameBoard"){
+            Current.currentLevel += 1;
+            LevelStart();
+        }
+    }
+
+    void LevelStart(){
+
         // Add two random target sprites
         int first = Random.Range(0, Targets.Length);
         int second = -1;
