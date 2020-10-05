@@ -235,6 +235,11 @@ public class Session : MonoBehaviour
                     renderer.materials[0].SetFloat("_Speed", speed);
                     renderer.materials[0].SetFloat("_Strength", strength);
                 }
+                else
+                {
+                    renderer.materials[0].SetFloat("_Speed", 0);
+                    renderer.materials[0].SetFloat("_Strength", 0);
+                }
             } else {
                 renderer.materials[0].SetFloat("_Speed", 0);
                 renderer.materials[0].SetFloat("_Strength", 0);
