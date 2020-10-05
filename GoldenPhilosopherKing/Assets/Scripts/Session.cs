@@ -41,6 +41,7 @@ public class Session : MonoBehaviour
     public int currentLevel = 0;
 
     public bool seeActualQuotes = false;
+    private bool doWarping = true;
 
     public bool PlayingVoice
     {
@@ -166,8 +167,25 @@ public class Session : MonoBehaviour
             quoteIndex = Random.Range(0, loadedQuotes.quotes.Length);
         } while (previousQuotes.Contains(quoteIndex));
 
+        // Turn 
+        SetWarping();
 
-        int distortionLevel = Random.Range(0, 3);
+        // Decide on the level of quote distortion
+        int distortionLevel = 0;        
+        if(5 < currentLevel && currentLevel <= 10){
+            // Distortion 0 or 1, with 0 being twice as likely
+            distortionLevel = Random.Range(0, 3);
+            if(distortionLevel == 2) distortionLevel = 0;
+        } else if(10 < currentLevel && currentLevel <= 15){
+            // Distortion 0 or 1, with equal odds
+            distortionLevel = Random.Range(0, 2);
+        } else if(15 < currentLevel && currentLevel <= 50) {
+            // 0, 1, or 2 with equal odds
+            distortionLevel = Random.Range(0, 3);
+        } else {
+            // Clearly there are still here just for fun
+            distortionLevel = 2;
+        }
 
         Quote quote = loadedQuotes.quotes[quoteIndex].GetQuote(distortionLevel);
         Quote quote0 = loadedQuotes.quotes[quoteIndex].GetQuote(0);
@@ -202,6 +220,24 @@ public class Session : MonoBehaviour
 
         // Set a random title
         GameObject.Find("TitleTextBox").GetComponent<Text>().text = GenerateMoralAlignment();        
+    }
+
+    void SetWarping(){
+        var distortion = GameObject.Find("Distortion");
+        if(distortion){
+            MeshRenderer renderer = distortion.GetComponent<MeshRenderer>();
+            if(doWarping){
+                if(currentLevel > 5){
+                    float speed = Mathf.Min(20, (currentLevel - 5) * 2.0f);
+                    float strength = Mathf.Min(0.01f, (currentLevel - 5) * 3 * 0.0001f);
+                    renderer.materials[0].SetFloat("_Speed", speed);
+                    renderer.materials[0].SetFloat("_Strength", strength);
+                }
+            } else {
+                renderer.materials[0].SetFloat("_Speed", 0);
+                renderer.materials[0].SetFloat("_Strength", 0);
+            }
+        }
     }
 
     string GenerateMoralAlignment(){
@@ -256,7 +292,9 @@ public class Session : MonoBehaviour
         }
 
         // Secret options
-        bool blur = optionsManager.Blur;
+        doWarping = optionsManager.Blur;
+        SetWarping();
+
         audioManager.enablePitchWalk = optionsManager.PitchWarp;
         
         // Super Secret Options
