@@ -10,11 +10,18 @@ public class TargetSet {
     public Sprite sign;
 };
 
+[System.Serializable]
+public class IntermissionSegment {
+    public int levelIndex;
+    public AudioClip segmentAudio;
+};
+
 public class Session : MonoBehaviour
 {
     public static Session Current;
     public TargetSet[] Targets = new TargetSet[0];
-
+    public IntermissionSegment[] Intermissions = new IntermissionSegment[0];
+    private string transitionAfterPlay = null;
     public LoadQuotes loadedQuotes;
 
     private AudioManager audioManager;
@@ -71,18 +78,34 @@ public class Session : MonoBehaviour
     public void Update()
     {
         OptionsUpdates();
+        if(transitionAfterPlay != null){
+            if(!voiceManager.IsPlaying){
+                var dest = transitionAfterPlay;
+                transitionAfterPlay = null;
+                SceneManager.LoadScene(dest);        
+            }
+        }
     }
 
     public void Reset(){
-        SceneManager.LoadScene("GameBoard");
+        SceneManager.LoadScene("Intermission");
     }
 
     void SceneStart(){
         var name = SceneManager.GetActiveScene().name;
         if(name == "Intermission"){
-            SceneManager.LoadScene("GameBoard");
+            transitionAfterPlay = "GameBoard";
+            
+            foreach(var segment in Intermissions){
+                if(segment.levelIndex == this.currentLevel){
+                    voiceManager.PlayVoice(segment.segmentAudio);
+                } else if(segment.levelIndex == -1 && this.currentLevel >= 50){
+                    voiceManager.PlayVoice(segment.segmentAudio);
+                }
+            }
+
         } else if(name == "GameBoard"){
-            Current.currentLevel += 1;
+            this.currentLevel += 1;
             LevelStart();
         }
     }

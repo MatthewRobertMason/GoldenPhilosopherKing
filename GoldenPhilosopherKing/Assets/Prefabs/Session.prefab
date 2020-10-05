@@ -178,10 +178,10 @@ MonoBehaviour:
   secretOptions: {fileID: 1303120413194792749}
   superSecretoptions: {fileID: 1303120413798568707}
   audioMute: 0
-  audioVolume: 0.25
+  audioVolume: 0.33
   audioReductionWhenVoicePlaying: 0.25
   voiceMute: 0
-  voiceVolume: 0.5
+  voiceVolume: 1
   blur: 1
   pitchWarp: 1
   seeActualQuotes: 0
@@ -334,11 +334,17 @@ MonoBehaviour:
     sign: {fileID: 21300000, guid: 32740bcfee991de47927ce208a42401c, type: 3}
   - sprite: {fileID: 21300000, guid: 3dfbd560bfb33334993b817b1b9a6ee4, type: 3}
     sign: {fileID: 21300000, guid: dee583f0979376547a1620bffafaa5a5, type: 3}
+  Intermissions:
+  - levelIndex: 0
+    segmentAudio: {fileID: 8300000, guid: 267ea7c500929b6499c4381989362c9e, type: 3}
+  - levelIndex: 1
+    segmentAudio: {fileID: 8300000, guid: 267ea7c500929b6499c4381989362c9e, type: 3}
   loadedQuotes:
     quotes: []
     saveDataToFile: 0
   quotesXMLFile: Assets\Voice\QuoteData.xml
   currentLevel: 0
+  seeActualQuotes: 0
 --- !u!1 &1303120413624089295
 GameObject:
   m_ObjectHideFlags: 0
