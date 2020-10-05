@@ -26,7 +26,9 @@ public class MenuTransition : MonoBehaviour
             if(t < 1){
                 var path = new Vector2(0, 0) - transitionStart;
 
-                this.gameObject.transform.position = transitionStart + path * t;
+                var fuzz = 2 * t * (1 - t);
+
+                this.gameObject.transform.position = transitionStart + path * (t + fuzz);
 
             } else {
                 this.gameObject.transform.position = new Vector2(0, 0);
