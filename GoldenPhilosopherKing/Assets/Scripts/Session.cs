@@ -110,6 +110,10 @@ public class Session : MonoBehaviour
 
         if(name == "Intermission"){
             transitionAfterPlay = "GameBoard";
+            var counter = GameObject.Find("ProgressCounter");
+            if(counter){
+                counter.GetComponent<Text>().text = (currentLevel + 1).ToString();
+            }
 
             if (Intermissions.Where(p => p.levelIndex == currentLevel)?.FirstOrDefault() != null)
             {
