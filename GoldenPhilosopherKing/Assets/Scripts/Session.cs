@@ -233,8 +233,8 @@ public class Session : MonoBehaviour
             MeshRenderer renderer = distortion.GetComponent<MeshRenderer>();
             if(doWarping){
                 if(currentLevel >= 5){
-                    float speed = Mathf.Min(20, (currentLevel - 4) * 2.0f);
-                    float strength = Mathf.Min(0.01f, (currentLevel - 4) * 5 * 0.0001f);
+                    float speed = Mathf.Min(20, (currentLevel - 4) * 1.25f);
+                    float strength = Mathf.Min(0.01f, (currentLevel - 4) * 3 * 0.0001f);
                     renderer.materials[0].SetFloat("_Speed", speed);
                     renderer.materials[0].SetFloat("_Strength", strength);
                     Debug.Log($"{speed} {strength}");
