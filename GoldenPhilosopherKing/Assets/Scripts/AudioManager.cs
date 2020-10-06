@@ -56,10 +56,15 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.volume = volume * volumeMultiplier;
 
-        if (audioSource.time == audioSource.clip.length)
+        if (audioSource.time >= audioSource.clip.length)
         {
             // Next song
-            audioSource.clip = music[((++currentTrack) % music.Length)];
+            currentTrack += 1;
+            if (currentTrack >= music.Length)
+            {
+                currentTrack = 0;
+            }
+            audioSource.clip = music[currentTrack];
             audioSource.Play();
         }
 
@@ -103,6 +108,17 @@ public class AudioManager : MonoBehaviour
         {
             pitchWalk = 1.0f;
             audioSource.pitch = 1.0f;
+        }
+
+        if (!audioSource.isPlaying)
+        {
+            currentTrack += 1;
+            if (currentTrack >= music.Length)
+            {
+                currentTrack = 0;
+            }
+            audioSource.clip = music[currentTrack];
+            audioSource.Play();
         }
     }
 
